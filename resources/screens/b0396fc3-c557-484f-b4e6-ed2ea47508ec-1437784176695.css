@@ -1,0 +1,55 @@
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 768px;
+}
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec #s-Master_item_1 div.offset {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1117px;
+  height: 93px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec #s-Image_1 {
+  position: absolute;
+  top: 92px;
+  left: 0px;
+  width: 1117px;
+  height: 2100px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec #s-medicationshomedropdown div.offset {
+  position: relative;
+  top: -2px;
+  left: -1px;
+}
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec #s-medicationshomedropdown {
+  position: absolute;
+  top: 175px;
+  left: 9px;
+  width: 710px;
+  height: 45px;
+  overflow: visible;
+}
+#s-b0396fc3-c557-484f-b4e6-ed2ea47508ec > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

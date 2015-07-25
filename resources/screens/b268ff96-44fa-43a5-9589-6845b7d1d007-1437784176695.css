@@ -1,0 +1,104 @@
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 768px;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Master_item_1 div.offset {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1117px;
+  height: 93px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Text_1 {
+  position: absolute;
+  top: 92px;
+  left: 443px;
+  width: 231px;
+  height: 90px;
+  background-color: transparent;
+  background-image: none;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 36.0pt;
+  font-family: Lato,Arial;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Text_1 .valign {
+  vertical-align: middle;
+  text-align: left;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Text_1 span {
+  color: #333333;
+  text-align: left;
+  text-decoration: none;
+  font-family: Lato,Arial;
+  font-size: 36.0pt;
+  font-style: normal;
+  font-weight: 800;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Text_1 span#rtr-s-Text_1_0 {
+  color: #333333;
+  text-align: left;
+  text-decoration: none;
+  font-family: Lato,Arial;
+  font-size: 36.0pt;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 0px;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Category_1 {
+  position: absolute;
+  top: 128px;
+  left: 56px;
+  width: 241px;
+  height: 31px;
+  background-color: #FFFFFF;
+  background-image: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #C8C8C8;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #C8C8C8;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #C8C8C8;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #C8C8C8;
+  box-shadow: none;
+  text-shadow: none;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  font-family: Lato,Arial;
+  font-size: 14.0pt;
+  font-style: normal;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 #s-Category_1 .valign {
+  width: 223px;
+}
+#s-b268ff96-44fa-43a5-9589-6845b7d1d007 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

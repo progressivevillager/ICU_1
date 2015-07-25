@@ -1,0 +1,99 @@
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 768px;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Icon {
+  position: absolute;
+  top: 353px;
+  left: 39px;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Browser_1 {
+  position: absolute;
+  top: 112px;
+  left: 351px;
+  width: 611px;
+  height: 1741px;
+  box-shadow: none;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Category_2 {
+  position: absolute;
+  top: 92px;
+  left: 785px;
+  width: 330px;
+  height: 43px;
+  background-color: #FFFFFF;
+  background-image: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #C8C8C8;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #C8C8C8;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #C8C8C8;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #C8C8C8;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: pointer;
+  z-index: 100;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  font-family: Lato,Arial;
+  font-size: 11.0pt;
+  font-style: normal;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Category_2 .valign {
+  width: 312px;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Master_item_2 div.offset {
+  position: relative;
+  top: -102px;
+  left: -10px;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Master_item_2 {
+  position: absolute;
+  top: 89px;
+  left: 1px;
+  width: 927px;
+  height: 704px;
+  overflow: visible;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Master_item_1 div.offset {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1117px;
+  height: 93px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-6a87a9e1-4d0d-48a8-8302-13904c97dd36 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+      <script type='text/javascript' src="https://www.google.com/jsapi"></script>
+    
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+google.load('visualization', '1.1', {
+    'packages': ['corechart']
+});
+google.setOnLoadCallback(drawCharts);
+function drawCharts(){
+drawTemperature();
+drawHeartRate();
+drawRespiratoryRate();
+drawPulseOximetry();
+drawFingerStickGlucose();
+drawHourlyTotalOutput();
+drawBloodPressure();
+}
+function drawTemperature() {
+		var thecolor="#ff6c00";
+		var thelinewidth=2;
+		var theminimumvaxis=80;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="Fahrenheit";
+		var xaxisunits="Hours";
+		var yaxisunits="Temperature";
+		var thedivtag="temperaturegraph";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+      data.addColumn('number',yaxisunits);
+     // data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),99],
+        [new Date(2015,6,1,7),99.5],
+        [new Date(2015,6,1,8),98],
+        [new Date(2015,6,1,9),96.5],
+        [new Date(2015,6,1,10),97],
+        [new Date(2015,6,1,11),99],
+        [new Date(2015,6,1,12),101],
+        [new Date(2015,6,1,13),105],
+        [new Date(2015,6,1,14),98],
+        [new Date(2015,6,1,15),97],
+        [new Date(2015,6,1,16),96],
+        [new Date(2015,6,1,17),95],
+        [new Date(2015,6,1,18),97],
+        [new Date(2015,6,1,19),96.3],
+        [new Date(2015,6,1,20),97.3],
+        [new Date(2015,6,1,21),98.2],
+        [new Date(2015,6,1,22),99],
+        [new Date(2015,6,1,23),95.6],
+        [new Date(2015,6,2,0),99],
+        [new Date(2015,6,2,1),98],
+        [new Date(2015,6,2,2),100],
+        [new Date(2015,6,2,3),102],
+        [new Date(2015,6,2,4),99],
+        [new Date(2015,6,2,5),97],
+        [new Date(2015,6,2,6),97]
+]);
+
+    var chart = new google.visualization.LineChart(document.getElementById('temperaturegraph'));
+    chart.draw(data, {
+        title: 'Temperature',
+        height:125, width:310,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':24,'color':thecolor},
+            'slantedText':false
+        },
+          vAxis:{
+            'title':theyaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             'baseline':40,
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              'minValue':80.0,
+              viewWindow:{min:theminimumvaxis}
+        },
+        series: {
+              0:{color: 'white',lineWidth:thelinewidth}
+           },
+       legend:{'position':'none'},
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+function drawHeartRate() {
+		var thecolor="#2ecc71";
+		var thelinewidth=2;
+		var theminimumvaxis=10;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="bpm";
+		var xaxisunits="Hours";
+		var yaxisunits="bpm";
+		var thedivtag="heartrategraph";
+		var thetitle="Heart Rate";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+      data.addColumn('number',yaxisunits);
+     // data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),98],
+        [new Date(2015,6,1,7),99],
+        [new Date(2015,6,1,8),100],
+        [new Date(2015,6,1,9),140],
+        [new Date(2015,6,1,10),150],
+        [new Date(2015,6,1,11),110],
+        [new Date(2015,6,1,12),90],
+        [new Date(2015,6,1,13),60],
+        [new Date(2015,6,1,14),80],
+        [new Date(2015,6,1,15),140],
+        [new Date(2015,6,1,16),110],
+        [new Date(2015,6,1,17),110],
+        [new Date(2015,6,1,18),110],
+        [new Date(2015,6,1,19),110],
+        [new Date(2015,6,1,20),113],
+        [new Date(2015,6,1,21),115],
+        [new Date(2015,6,1,22),105],
+        [new Date(2015,6,1,23),102],
+        [new Date(2015,6,2,0),98],
+        [new Date(2015,6,2,1),96],
+        [new Date(2015,6,2,2),95],
+        [new Date(2015,6,2,3),75],
+        [new Date(2015,6,2,4),65],
+        [new Date(2015,6,2,5),45],
+        [new Date(2015,6,2,6),32]
+]);
+
+    var chart = new google.visualization.LineChart(document.getElementById(thedivtag));
+    chart.draw(data, {
+        title: thetitle,
+        height:125, width:310,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':24,'color':thecolor},
+            'slantedText':false
+        },
+          vAxis:{
+            'title':theyaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             'baseline':40,
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              'minValue':80.0,
+              viewWindow:{min:theminimumvaxis}
+        },
+        series: {
+              0:{color: 'white',lineWidth:thelinewidth}
+           },
+       legend:{'position':'none'},
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+function drawRespiratoryRate() {
+		var thecolor="#8e44ad";
+		var thelinewidth=2;
+		var theminimumvaxis=10;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="brpm";
+		var xaxisunits="Hours";
+		var yaxisunits="brpm";
+		var thedivtag="respiratoryrategraph";
+		var thetitle="Respiratory Rate";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+      data.addColumn('number',yaxisunits);
+     // data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),12],
+        [new Date(2015,6,1,7),13],
+        [new Date(2015,6,1,8),20],
+        [new Date(2015,6,1,9),30],
+        [new Date(2015,6,1,10),40],
+        [new Date(2015,6,1,11),20],
+        [new Date(2015,6,1,12),18],
+        [new Date(2015,6,1,13),18],
+        [new Date(2015,6,1,14),18],
+        [new Date(2015,6,1,15),18],
+        [new Date(2015,6,1,16),18],
+        [new Date(2015,6,1,17),18],
+        [new Date(2015,6,1,18),18],
+        [new Date(2015,6,1,19),18],
+        [new Date(2015,6,1,20),18],
+        [new Date(2015,6,1,21),18],
+        [new Date(2015,6,1,22),12],
+        [new Date(2015,6,1,23),18],
+        [new Date(2015,6,2,0),18],
+        [new Date(2015,6,2,1),18],
+        [new Date(2015,6,2,2),18],
+        [new Date(2015,6,2,3),15],
+        [new Date(2015,6,2,4),15],
+        [new Date(2015,6,2,5),15],
+        [new Date(2015,6,2,6),15]
+]);
+
+    var chart = new google.visualization.LineChart(document.getElementById(thedivtag));
+    chart.draw(data, {
+        title: thetitle,
+        height:125, width:310,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':24,'color':thecolor},
+            'slantedText':false
+        },
+          vAxis:{
+            'title':theyaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             'baseline':40,
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              'minValue':80.0,
+              viewWindow:{min:theminimumvaxis}
+        },
+        series: {
+              0:{color: 'white',lineWidth:thelinewidth}
+           },
+       legend:{'position':'none'},
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+function drawPulseOximetry() {
+		var thecolor="#2980b9";
+		var thelinewidth=2;
+		var theminimumvaxis=10;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="O2 Sat";
+		var xaxisunits="Hours";
+		var yaxisunits="%";
+		var thedivtag="pulseoximetrygraph";
+		var thetitle="Pulse Oximetry";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+      data.addColumn('number',yaxisunits);
+     // data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),12],
+        [new Date(2015,6,1,7),13],
+        [new Date(2015,6,1,8),20],
+        [new Date(2015,6,1,9),30],
+        [new Date(2015,6,1,10),40],
+        [new Date(2015,6,1,11),20],
+        [new Date(2015,6,1,12),18],
+        [new Date(2015,6,1,13),18],
+        [new Date(2015,6,1,14),18],
+        [new Date(2015,6,1,15),18],
+        [new Date(2015,6,1,16),18],
+        [new Date(2015,6,1,17),18],
+        [new Date(2015,6,1,18),18],
+        [new Date(2015,6,1,19),18],
+        [new Date(2015,6,1,20),18],
+        [new Date(2015,6,1,21),18],
+        [new Date(2015,6,1,22),12],
+        [new Date(2015,6,1,23),18],
+        [new Date(2015,6,2,0),18],
+        [new Date(2015,6,2,1),18],
+        [new Date(2015,6,2,2),18],
+        [new Date(2015,6,2,3),15],
+        [new Date(2015,6,2,4),15],
+        [new Date(2015,6,2,5),15],
+        [new Date(2015,6,2,6),15]
+]);
+
+    var chart = new google.visualization.LineChart(document.getElementById(thedivtag));
+    chart.draw(data, {
+        title: thetitle,
+        height:125, width:310,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':24,'color':thecolor},
+            'slantedText':false
+        },
+          vAxis:{
+            'title':theyaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             'baseline':40,
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              'minValue':80.0,
+              viewWindow:{min:theminimumvaxis}
+        },
+        series: {
+              0:{color: 'white',lineWidth:thelinewidth}
+           },
+       legend:{'position':'none'},
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+function drawFingerStickGlucose() {
+		var thecolor="#f1c40f";
+		var thelinewidth=2;
+		var theminimumvaxis=10;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="Glucose";
+		var xaxisunits="Hours";
+		var yaxisunits="";
+		var thedivtag="fingerstickglucosegraph";
+		var thetitle="Finger Stick Glucose";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+      data.addColumn('number',yaxisunits);
+     // data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),12],
+        [new Date(2015,6,1,7),13],
+        [new Date(2015,6,1,8),20],
+        [new Date(2015,6,1,9),30],
+        [new Date(2015,6,1,10),40],
+        [new Date(2015,6,1,11),20],
+        [new Date(2015,6,1,12),18],
+        [new Date(2015,6,1,13),18],
+        [new Date(2015,6,1,14),18],
+        [new Date(2015,6,1,15),18],
+        [new Date(2015,6,1,16),18],
+        [new Date(2015,6,1,17),18],
+        [new Date(2015,6,1,18),18],
+        [new Date(2015,6,1,19),18],
+        [new Date(2015,6,1,20),18],
+        [new Date(2015,6,1,21),18],
+        [new Date(2015,6,1,22),12],
+        [new Date(2015,6,1,23),18],
+        [new Date(2015,6,2,0),18],
+        [new Date(2015,6,2,1),18],
+        [new Date(2015,6,2,2),18],
+        [new Date(2015,6,2,3),15],
+        [new Date(2015,6,2,4),15],
+        [new Date(2015,6,2,5),15],
+        [new Date(2015,6,2,6),15]
+]);
+
+    var chart = new google.visualization.LineChart(document.getElementById(thedivtag));
+    chart.draw(data, {
+        title: thetitle,
+        height:125, width:310,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':24,'color':thecolor},
+            'slantedText':false
+        },
+          vAxis:{
+            'title':theyaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             'baseline':40,
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              'minValue':80.0,
+              viewWindow:{min:theminimumvaxis}
+        },
+        series: {
+              0:{color: 'white',lineWidth:thelinewidth}
+           },
+       legend:{'position':'none'},
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+function drawHourlyTotalOutput() {
+		var thecolor="#bdc3c7";
+		var thelinewidth=2;
+		var theminimumvaxis=10;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="mL/hour";
+		var xaxisunits="Hours";
+		var yaxisunits="ml/hour";
+		var thedivtag="hourlytotaloutputgraph";
+		var thetitle="Hourly Total Output";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+      data.addColumn('number',yaxisunits);
+     // data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),12],
+        [new Date(2015,6,1,7),13],
+        [new Date(2015,6,1,8),20],
+        [new Date(2015,6,1,9),30],
+        [new Date(2015,6,1,10),40],
+        [new Date(2015,6,1,11),20],
+        [new Date(2015,6,1,12),18],
+        [new Date(2015,6,1,13),18],
+        [new Date(2015,6,1,14),18],
+        [new Date(2015,6,1,15),18],
+        [new Date(2015,6,1,16),18],
+        [new Date(2015,6,1,17),18],
+        [new Date(2015,6,1,18),18],
+        [new Date(2015,6,1,19),18],
+        [new Date(2015,6,1,20),18],
+        [new Date(2015,6,1,21),18],
+        [new Date(2015,6,1,22),12],
+        [new Date(2015,6,1,23),18],
+        [new Date(2015,6,2,0),18],
+        [new Date(2015,6,2,1),18],
+        [new Date(2015,6,2,2),18],
+        [new Date(2015,6,2,3),15],
+        [new Date(2015,6,2,4),15],
+        [new Date(2015,6,2,5),15],
+        [new Date(2015,6,2,6),15]
+]);
+
+    var chart = new google.visualization.LineChart(document.getElementById(thedivtag));
+    chart.draw(data, {
+        title: thetitle,
+        height:125, width:310,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':24,'color':thecolor},
+            'slantedText':false
+        },
+          vAxis:{
+            'title':theyaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             'baseline':40,
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              'minValue':80.0,
+              viewWindow:{min:theminimumvaxis}
+        },
+        series: {
+              0:{color: 'white',lineWidth:thelinewidth}
+           },
+       legend:{'position':'none'},
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+function drawBloodPressure() {
+		var thecolor="#e74c3c";
+		var thelinewidth=2;
+		var theminimumvaxis=20;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="mmHg";
+		var xaxisunits="Hours";
+		var yaxisunits="mmHg";
+		var thedivtag="bloodpressuregraph";
+		var thetitle="Blood Pressure";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+data.addColumn('number',"Systolic Blood Pressure");
+data.addColumn('number',"Diastolic Blood Pressure");
+data.addColumn('number',"Mean Arterial Pressure");
+     // data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),120,80,93.3],
+        [new Date(2015,6,1,7),130,80,96.6],
+        [new Date(2015,6,1,8),145,90,108.3],
+        [new Date(2015,6,1,9),125,80,95],
+        [new Date(2015,6,1,10),110,70,83.3],
+        [new Date(2015,6,1,11),80,40,53.5],
+        [new Date(2015,6,1,12),70,50,56.6],
+        [new Date(2015,6,1,13),75,40,51.6],
+        [new Date(2015,6,1,14),65,30,41.6],
+        [new Date(2015,6,1,15),80,40,53.3],
+        [new Date(2015,6,1,16),75,40,51.6],
+        [new Date(2015,6,1,17),65,30,41.6],
+        [new Date(2015,6,1,18),110,60,76.6],
+        [new Date(2015,6,1,19),140,70,93.3],
+        [new Date(2015,6,1,20),110,80,90],
+        [new Date(2015,6,1,21),130,65,86.6],
+        [new Date(2015,6,1,22),150,80,103.3],
+        [new Date(2015,6,1,23),140,50,80],
+        [new Date(2015,6,2,0),123,65,84.3],
+        [new Date(2015,6,2,1),185,80,115],
+        [new Date(2015,6,2,2),220,110,146.6],
+        [new Date(2015,6,2,3),230,120,156.6],
+        [new Date(2015,6,2,4),180,110,133.3],
+        [new Date(2015,6,2,5),110,80,90],
+        [new Date(2015,6,2,6),120,65,83.3]
+]);
+
+    var chart = new google.visualization.LineChart(document.getElementById(thedivtag));
+    chart.draw(data, {
+        title: thetitle,
+        height:250, width:310,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        legend: { 
+        position: 'none', 
+        textStyle: {color: '#FFFFFF',fontSize:10,italic:false}
+        },
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':24,'color':thecolor},
+            'slantedText':false
+        },
+          vAxis:{
+            'title':theyaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             'baseline':40,
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              'minValue':80.0,
+              viewWindow:{min:theminimumvaxis}
+        },
+        series: {
+              0:{color: 'white'},
+              1:{color:'blue'},
+           },
+       lineWidth:thelinewidth,
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+//]]>  
+
+</script>
+
+
+</head>
+<body style="background-color:transparent;">
+<table align="center" valign="top" cellpadding="40">
+<tr>
+<td>
+  <div id="temperaturegraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="bloodpressuregraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+
+<td>
+  <div id="heartrategraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="respiratoryrategraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="pulseoximetrygraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="fingerstickglucosegraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="hourlytotaloutputgraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+
+</table>
+
+  
+</body>
+
+
+</html>
+
+

@@ -1,0 +1,75 @@
+#m-c5aa8754-70ca-4b49-832d-98598849ceef #m-c5aa8754-medicationsdropdown {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  width: 330px;
+  height: 43px;
+  background-color: #FFFFFF;
+  background-image: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #C8C8C8;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #C8C8C8;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #C8C8C8;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #C8C8C8;
+  box-shadow: none;
+  text-shadow: none;
+  z-index: 100;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  font-family: Lato,Arial;
+  font-size: 11.0pt;
+  font-style: normal;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#m-c5aa8754-70ca-4b49-832d-98598849ceef #m-c5aa8754-medicationsdropdown .valign {
+  width: 312px;
+}
+#m-c5aa8754-70ca-4b49-832d-98598849ceef #m-c5aa8754-supplementaltablesdropdown {
+  position: absolute;
+  top: 2px;
+  left: 379px;
+  width: 330px;
+  height: 43px;
+  background-color: #FFFFFF;
+  background-image: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #C8C8C8;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #C8C8C8;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #C8C8C8;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #C8C8C8;
+  box-shadow: none;
+  text-shadow: none;
+  z-index: 100;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  font-family: Lato,Arial;
+  font-size: 11.0pt;
+  font-style: normal;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#m-c5aa8754-70ca-4b49-832d-98598849ceef #m-c5aa8754-supplementaltablesdropdown .valign {
+  width: 312px;
+}
+#m-c5aa8754-70ca-4b49-832d-98598849ceef.master > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

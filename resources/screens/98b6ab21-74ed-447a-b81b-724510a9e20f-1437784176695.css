@@ -1,0 +1,42 @@
+#s-98b6ab21-74ed-447a-b81b-724510a9e20f > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-98b6ab21-74ed-447a-b81b-724510a9e20f > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 768px;
+}
+#s-98b6ab21-74ed-447a-b81b-724510a9e20f #s-Master_item_1 div.offset {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#s-98b6ab21-74ed-447a-b81b-724510a9e20f #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1117px;
+  height: 93px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-98b6ab21-74ed-447a-b81b-724510a9e20f #s-Image_1 {
+  position: absolute;
+  top: 92px;
+  left: 0px;
+  width: 1117px;
+  height: 800px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-98b6ab21-74ed-447a-b81b-724510a9e20f > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

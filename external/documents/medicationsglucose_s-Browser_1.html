@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+      <script type='text/javascript' src="https://www.google.com/jsapi"></script>
+    
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+google.load('visualization', '1.1', {
+    'packages': ['corechart']
+});
+google.setOnLoadCallback(drawCharts);
+function drawCharts(){
+
+drawFingerStickGlucose();
+
+}
+
+
+function drawFingerStickGlucose() {
+		var thecolor="#f1c40f";
+		var thelinewidth=2;
+		var theminimumvaxis=10;
+		var thexaxislabel="Last 24 Hours";
+		var theyaxislabel="Glucose";
+		var xaxisunits="Hours";
+		var yaxisunits="";
+		var thedivtag="fingerstickglucosegraph";
+		var thetitle="Glucose & Medications";
+
+    var data = new google.visualization.DataTable();
+ data.addColumn('datetime',xaxisunits);
+      data.addColumn('number',yaxisunits);
+      data.addColumn('number','Medication Units');
+      data.addColumn({type:"string",role:"tooltip",p: { html: true }});
+     
+
+		
+      data.addRows([
+        [new Date(2015,6,1,6),300,15,'Insulin R 15 units'],
+        [new Date(2015,6,1,7),200,null,null],
+        [new Date(2015,6,1,8),220,null,null],
+        [new Date(2015,6,1,9),180,null,null],
+        [new Date(2015,6,1,10),160,null,null],
+        [new Date(2015,6,1,11),170,10,'Humalog 15 units'],
+        [new Date(2015,6,1,12),90,null,null],
+        [new Date(2015,6,1,13),20,null,null],
+        [new Date(2015,6,1,14),100,null,null],
+        [new Date(2015,6,1,15),450,null,null],
+        [new Date(2015,6,1,16),300,null,null],
+        [new Date(2015,6,1,17),220,null,null],
+        [new Date(2015,6,1,18),440,null,null],
+        [new Date(2015,6,1,19),320,null,null],
+        [new Date(2015,6,1,20),150,25,'Levemir 25 units'],
+        [new Date(2015,6,1,21),220,null,null],
+        [new Date(2015,6,1,22),180,null,null],
+        [new Date(2015,6,1,23),190,5,'Insulin Drip 5 units'],
+        [new Date(2015,6,2,0),170,5,'Insulin Drip 5 units'],
+        [new Date(2015,6,2,1),140,5,'Insulin Drip 5 units'],
+        [new Date(2015,6,2,2),130,5,'Insulin Drip 5 units'],
+        [new Date(2015,6,2,3),120,5,'Insulin Drip 5 units'],
+        [new Date(2015,6,2,4),110,5,'Insulin Drip 5 units'],
+        [new Date(2015,6,2,5),150,5,'Insulin Drip 5 units'],
+        [new Date(2015,6,2,6),160,5,'Insulin Drip 5 units']
+]);
+
+    var chart = new google.visualization.ComboChart(document.getElementById(thedivtag));
+    chart.draw(data, {
+        title: thetitle,
+        height:350, width:750,
+        fontName:'Verdana',
+        titleTextStyle: {
+            color: '#FFFFFF',fontSize:14,position:'center'
+  },
+        backgroundColor:{ 'fill': thecolor, 'stroke':'#FFFFFF', 'strokeWidth': 1}, 
+        fontSize:14,
+        forcelFrame:false,
+        curveType: 'function',
+        focusTarget:'category',
+        hAxis:{
+            'title':thexaxislabel,
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+                        textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+            'baselineColor': thecolor,
+            'format':'H',
+            'gridlines':{'count':12,'color':thecolor},
+            'slantedText':false
+        },
+        vAxes:[
+          		{
+				title:'Glucose',
+				titleTextStyle: {color: '#FFFFFF',fontSize:14,italic:false},
+            textStyle: {color: '#FFFFFF',fontSize:10,italic:false},
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              },
+              {
+				title:'Units',
+				titleTextStyle: {color: '#FFFFFF',fontSize:14,italic:false},
+            textStyle: {color: '#FFFFFF',fontSize:10,italic:false},
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              }
+        ],
+       /* vAxis:{
+          
+            titleTextStyle: {
+                color: '#FFFFFF',fontSize:14,italic:false
+  },
+            textStyle: {
+                color: '#FFFFFF',fontSize:10,italic:false
+  },
+             
+            'baselineColor': thecolor,
+            'gridlines':{'count':10,'color':thecolor},
+              'slantedText':false,
+              },*/
+        series: {
+              0:{type:'lines',color: 'white',lineWidth:thelinewidth, targetAxisIndex: 0},
+              1: {type: 'bars',targetAxisIndex: 1}
+           },
+       legend:{'position':'none'},
+        tooltip: {
+         isHtml: true,ignoreBounds:true,
+         textStyle: {color: '#000000',fontSize:8,italic:false}
+        }
+    });
+}
+
+
+</script>
+
+
+</head>
+<body style="background-color:transparent;">
+<table align="center" valign="top" >
+<tr>
+<td>
+  <div id="temperaturegraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="bloodpressuregraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+
+<td>
+  <div id="heartrategraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="respiratoryrategraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="pulseoximetrygraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="fingerstickglucosegraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+<tr>
+<td>
+  <div id="hourlytotaloutputgraph" style="align:center;valign:center;"></div>
+  </td>
+</tr>
+
+</table>
+
+  
+</body>
+
+
+</html>
+

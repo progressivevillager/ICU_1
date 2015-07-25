@@ -1,0 +1,42 @@
+#s-3ecd9857-b0f7-4516-97b9-df26dcf158b5 > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-3ecd9857-b0f7-4516-97b9-df26dcf158b5 > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 768px;
+}
+#s-3ecd9857-b0f7-4516-97b9-df26dcf158b5 #s-Master_item_1 div.offset {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#s-3ecd9857-b0f7-4516-97b9-df26dcf158b5 #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1117px;
+  height: 93px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-3ecd9857-b0f7-4516-97b9-df26dcf158b5 #s-Image_1 {
+  position: absolute;
+  top: 92px;
+  left: 0px;
+  width: 1117px;
+  height: 1000px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-3ecd9857-b0f7-4516-97b9-df26dcf158b5 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

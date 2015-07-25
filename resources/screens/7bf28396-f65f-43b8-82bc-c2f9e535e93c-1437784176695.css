@@ -1,0 +1,56 @@
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 768px;
+}
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c #s-Master_item_1 div.offset {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1117px;
+  height: 93px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c #s-Image_1 {
+  position: absolute;
+  top: 92px;
+  left: 0px;
+  width: 1117px;
+  height: 2100px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c #s-Master_item_2 div.offset {
+  position: relative;
+  top: -2px;
+  left: -1px;
+}
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c #s-Master_item_2 {
+  position: absolute;
+  top: 175px;
+  left: 9px;
+  width: 710px;
+  height: 45px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-7bf28396-f65f-43b8-82bc-c2f9e535e93c > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

@@ -1,0 +1,77 @@
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1366px;
+  min-width: 1366px;
+  min-height: 768px;
+}
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b #s-Image_1 {
+  position: absolute;
+  top: 92px;
+  left: 0px;
+  width: 1117px;
+  height: 1500px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b #s-Master_item_1 div.offset {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b #s-Master_item_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1117px;
+  height: 93px;
+  z-index: 100;
+  overflow: visible;
+}
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b #s-medicationsdropdown {
+  position: absolute;
+  top: 98px;
+  left: 9px;
+  width: 330px;
+  height: 43px;
+  background-color: #FFFFFF;
+  background-image: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #C8C8C8;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #C8C8C8;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #C8C8C8;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #C8C8C8;
+  box-shadow: none;
+  text-shadow: none;
+  z-index: 100;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  font-family: Lato,Arial;
+  font-size: 11.0pt;
+  font-style: normal;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b #s-medicationsdropdown .valign {
+  width: 312px;
+}
+#s-e460cd2d-61df-4388-8b28-edfe88d5f09b > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}
